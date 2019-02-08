@@ -30,9 +30,12 @@ namespace BeingCraftsman.FizzBuzz.Tests
         }
 
         [TestMethod]
-        public void ShouldReturnStringFizzBuzzWhenGivenNumberIsDivisibleBy3And5()
+        [DataRow(15)]
+        [DataRow(30)]
+        [DataRow(90)]
+        [DataRow(150)]
+        public void ShouldReturnStringFizzBuzzWhenGivenNumberIsDivisibleBy3And5(int input)
         {
-            int input = 15;
             string actual = FizzBuzzGenerator.Generate(input);
             string expected = "FizzBuzz";
             Assert.AreEqual(expected, actual);
