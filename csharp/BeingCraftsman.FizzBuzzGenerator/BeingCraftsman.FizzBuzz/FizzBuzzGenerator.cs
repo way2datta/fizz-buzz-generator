@@ -6,9 +6,7 @@ namespace BeingCraftsman.FizzBuzz
     {
         public static string Generate(int input)
         {
-
-
-            if (input == 15)
+            if (input % 5 == 0 && input % 3 == 0)
             {
                 return "FizzBuzz";
             }
