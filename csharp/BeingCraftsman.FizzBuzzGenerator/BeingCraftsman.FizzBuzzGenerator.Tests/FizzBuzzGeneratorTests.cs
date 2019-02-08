@@ -13,5 +13,14 @@ namespace BeingCraftsman.FizzBuzz.Tests
             string expected = "Fizz";
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ShouldReturnStringBuzzWhenGivenNumberIsDivisibleBy5()
+        {
+            int input = 10;
+            string actual = FizzBuzzGenerator.Generate(input);
+            string expected = "Buzz";
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
