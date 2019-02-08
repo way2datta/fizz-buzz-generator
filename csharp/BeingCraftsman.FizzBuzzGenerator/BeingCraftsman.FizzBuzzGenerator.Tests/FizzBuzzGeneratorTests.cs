@@ -10,9 +10,8 @@ namespace BeingCraftsman.FizzBuzz.Tests
         [DataRow(6)]
         [DataRow(33)]
         [DataRow(99)]
-        public void ShouldReturnStringFizzWhenGivenNumberIsDivisibleBy3()
+        public void ShouldReturnStringFizzWhenGivenNumberIsDivisibleBy3(int input)
         {
-            int input = 3;
             string actual = FizzBuzzGenerator.Generate(input);
             string expected = "Fizz";
             Assert.AreEqual(expected, actual);
