@@ -6,7 +6,7 @@ namespace BeingCraftsman.FizzBuzz
     {
         public static string Generate(int input)
         {
-            throw new NotImplementedException();
+            return "Fizz";
         }
     }
 }
