@@ -18,9 +18,12 @@ namespace BeingCraftsman.FizzBuzz.Tests
         }
 
         [TestMethod]
-        public void ShouldReturnStringBuzzWhenGivenNumberIsDivisibleBy5()
+        [DataRow(10)]
+        [DataRow(20)]
+        [DataRow(40)]
+        [DataRow(100)]
+        public void ShouldReturnStringBuzzWhenGivenNumberIsDivisibleBy5(int input)
         {
-            int input = 10;
             string actual = FizzBuzzGenerator.Generate(input);
             string expected = "Buzz";
             Assert.AreEqual(expected, actual);
