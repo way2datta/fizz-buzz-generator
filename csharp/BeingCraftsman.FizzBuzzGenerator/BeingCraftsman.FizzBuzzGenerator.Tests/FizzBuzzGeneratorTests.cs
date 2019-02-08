@@ -6,6 +6,10 @@ namespace BeingCraftsman.FizzBuzz.Tests
     public class FizzBuzzGeneratorTests
     {
         [TestMethod]
+        [DataRow(3)]
+        [DataRow(6)]
+        [DataRow(33)]
+        [DataRow(99)]
         public void ShouldReturnStringFizzWhenGivenNumberIsDivisibleBy3()
         {
             int input = 3;
