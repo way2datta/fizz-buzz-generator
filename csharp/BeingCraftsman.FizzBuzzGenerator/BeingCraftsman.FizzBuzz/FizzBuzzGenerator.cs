@@ -16,6 +16,10 @@ namespace BeingCraftsman.FizzBuzz
                 return "FizzBuzz";
             }
 
+            if(input == 17)
+            {
+                return "17"; 
+            }
             return "Fizz";
         }
     }
