@@ -11,9 +11,9 @@ namespace BeingCraftsman.FizzBuzz
                 return "FizzBuzz";
             }
 
-            if(input == 17)
+            if (input % 3 == 0)
             {
-                return "17"; 
+                return "Fizz";
             }
 
             if (input % 5 == 0)
@@ -21,12 +21,7 @@ namespace BeingCraftsman.FizzBuzz
                 return "Buzz";
             }
 
-            if (input % 3 == 0)
-            {
-                return "Fizz";
-            }
-
-            return "Fizz";
+            return input.ToString();
         }
     }
 }

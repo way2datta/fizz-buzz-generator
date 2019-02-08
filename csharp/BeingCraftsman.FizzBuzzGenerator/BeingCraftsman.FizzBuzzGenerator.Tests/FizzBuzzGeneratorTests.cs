@@ -49,7 +49,7 @@ namespace BeingCraftsman.FizzBuzz.Tests
         public void ShouldReturnInputAsStringWhenGivenNumberIsNeitherDivisibleBy3or5(int input)
         {
             string actual = FizzBuzzGenerator.Generate(input);
-            string expected = "17";
+            string expected = input.ToString();
             Assert.AreEqual(expected, actual);
         }
     }
