@@ -31,5 +31,14 @@ namespace BeingCraftsman.FizzBuzz.Tests
             string expected = "FizzBuzz";
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ShouldReturnInputAsStringWhenGivenNumberIsNeitherDivisibleBy3or5()
+        {
+            int input = 17;
+            string actual = FizzBuzzGenerator.Generate(input);
+            string expected = "17";
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
