@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeingCraftsman.FizzBuzz.Tests", "BeingCraftsman.FizzBuzzGenerator.Tests\BeingCraftsman.FizzBuzz.Tests.csproj", "{4CE07F3E-4677-4643-BFD1-50DFFAF3D8C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeingCraftsman.FizzBuzz", "BeingCraftsman.FizzBuzz\BeingCraftsman.FizzBuzz.csproj", "{4FB90B67-B5DB-4A2A-A6A7-84F4828B75C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CE07F3E-4677-4643-BFD1-50DFFAF3D8C3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4CE07F3E-4677-4643-BFD1-50DFFAF3D8C3}.Debug|x86.Build.0 = Debug|Any CPU
+		{4CE07F3E-4677-4643-BFD1-50DFFAF3D8C3}.Release|x86.ActiveCfg = Release|Any CPU
+		{4CE07F3E-4677-4643-BFD1-50DFFAF3D8C3}.Release|x86.Build.0 = Release|Any CPU
+		{4FB90B67-B5DB-4A2A-A6A7-84F4828B75C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4FB90B67-B5DB-4A2A-A6A7-84F4828B75C4}.Debug|x86.Build.0 = Debug|Any CPU
+		{4FB90B67-B5DB-4A2A-A6A7-84F4828B75C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{4FB90B67-B5DB-4A2A-A6A7-84F4828B75C4}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+		$0.StandardHeader = $4
+		$0.VersionControlPolicy = $5
+	EndGlobalSection
+EndGlobal
