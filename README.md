@@ -15,20 +15,20 @@ The generate method returns the string
 It is clear that there are four use cases  
 - **FizzBuzz**
 
-  As a fizz buzz generator, I should be able generate a string `FizzBuzz` for given input number 
-  when number is divisible by 3 and 5.
+  As a fizz buzz generator, I should be able to generate a string `FizzBuzz` for a given input number 
+  when a number is divisible by 3 and 5.
 
 - **Fizz**
 
-  As a fizz buzz generator, I should be able generate a string `Fizz` for given input number 
-  when number is divisible by 3.
+  As a fizz buzz generator, I should be able to generate a string `Fizz` for a given input number 
+  when a number is divisible by 3.
   
 - **Buzz**
 
-  As a fizz buzz generator, I should be able generate a string `Buzz` for given input number 
-  when number is divisible by 5.
+  As a fizz buzz generator, I should be able to generate a string `Buzz` for a given input number 
+  when a number is divisible by 5.
   
 - **Number (converted to string)**
 
-  As a fizz buzz generator, I should be able generate a string format of input number for given input number 
-  when number is neither divisible by 3 or 5.
+  As a fizz buzz generator, I should be able to generate a string format of input number for a given input number 
+  when a number is neither divisible by 3 or 5.
