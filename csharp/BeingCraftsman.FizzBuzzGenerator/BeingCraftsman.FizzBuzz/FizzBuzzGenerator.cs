@@ -1,27 +1,35 @@
-﻿using System;
-
-namespace BeingCraftsman.FizzBuzz
+﻿namespace BeingCraftsman.FizzBuzz
 {
-    public class FizzBuzzGenerator
+    public static class FizzBuzzGenerator
     {
         public static string Generate(int input)
         {
-            if (input % 5 == 0 && input % 3 == 0)
+            if (IsDivisibleBy5(input) && IsDivisibleBy3(input))
             {
                 return "FizzBuzz";
             }
 
-            if (input % 3 == 0)
+            if (IsDivisibleBy3(input))
             {
                 return "Fizz";
             }
 
-            if (input % 5 == 0)
+            if (IsDivisibleBy5(input))
             {
                 return "Buzz";
             }
 
             return input.ToString();
+        }
+
+        private static bool IsDivisibleBy3(int input)
+        {
+            return input % 3 == 0;
+        }
+
+        private static bool IsDivisibleBy5(int input)
+        {
+            return input % 5 == 0;
         }
     }
 }
