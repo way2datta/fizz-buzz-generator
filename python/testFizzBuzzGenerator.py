@@ -1,5 +1,5 @@
 import unittest
-from FizzBuzzGenerator import isValidInput,isInputGreaterThan5,isInputDivisibleBy3,isInputDivisibleBy5,printFizzIfInputIsDivisibleByOnly3
+from FizzBuzzGenerator import isValidInput,isInputGreaterThan5,isInputDivisibleBy3,isInputDivisibleBy5,printFizzIfInputIsDivisibleByOnly3,printBuzzIfInputIsDivisibleByOnly5
 
 class FizzBuzzGeneratorTestClass(unittest.TestCase):
     """Tests for `FizzBuzzGenerator.py`."""
@@ -25,6 +25,11 @@ class FizzBuzzGeneratorTestClass(unittest.TestCase):
 
     def test_output_equals_fizz_if_input_is_divisible_only_by_3(self):
     	self.assertEquals("fizz",printFizzIfInputIsDivisibleByOnly3(6))
+    	self.assertNotEquals("fizz",printFizzIfInputIsDivisibleByOnly3(15))
+
+    def test_output_equals_buzz_if_input_is_divisible_only_by_5(self):
+    	self.assertEquals("buzz",printBuzzIfInputIsDivisibleByOnly5(10))
+    	self.assertNotEquals("buzz",printBuzzIfInputIsDivisibleByOnly5(15))
 
 if __name__ == '__main__':
     unittest.main()
