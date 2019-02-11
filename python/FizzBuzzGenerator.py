@@ -3,7 +3,9 @@
 def isValidInput(input):
 	return type(input) == int
 
-def isInputGreaterThan3(input):
-	return input > 3
+def isInputGreaterThan5(input):
+	return input >= 5
 def isInputDivisibleBy3(input):
-	pass
+	return input%3 == 0
+def isInputDivisibleBy5(input):
+	return input%5 == 0
