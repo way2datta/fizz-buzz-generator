@@ -1,4 +1,5 @@
 #FizzBuzzGenerator.py
+import string
 
 def isValidInput(input):
 	return type(input) == int
@@ -23,3 +24,7 @@ def printBuzzIfInputIsDivisibleByOnly5(input):
 def printBuzzIfInputIsDivisibleBy3And5(input):
 	if isInputDivisibleBy3(input) and isInputDivisibleBy5(input):
 		return "fizzbuzz"
+
+def printInputAsStringIfInputIsNotDivisibleBy3And5(input):
+	if not(isInputDivisibleBy3(input)) and not(isInputDivisibleBy5(input)):
+		return str(input)
