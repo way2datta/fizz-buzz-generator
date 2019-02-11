@@ -19,3 +19,7 @@ def printFizzIfInputIsDivisibleByOnly3(input):
 def printBuzzIfInputIsDivisibleByOnly5(input):
 	if not(isInputDivisibleBy3(input)) and isInputDivisibleBy5(input):
 		return "buzz"
+
+def printBuzzIfInputIsDivisibleBy3And5(input):
+	if isInputDivisibleBy3(input) and isInputDivisibleBy5(input):
+		return "fizzbuzz"
