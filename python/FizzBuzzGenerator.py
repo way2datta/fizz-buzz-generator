@@ -14,4 +14,6 @@ class FizzBuzzGenerator:
 				return "fizz"
             if input%5 == 0 and not(input%3 == 0):
 				return "buzz"
+            if input%5 == 0 and input%3 == 0:
+				return "fizzbuzz"
         
