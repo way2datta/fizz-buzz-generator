@@ -11,5 +11,9 @@ class FizzBuzzGeneratorTestClass(unittest.TestCase):
     fizzbuzzgenerator = FizzBuzzGenerator()
     self.assertEquals("fizz",fizzbuzzgenerator.fizzBuzzGenerator(3))
 
+  def test_fizz_if_input_divisible_by_5(self):
+    fizzbuzzgenerator = FizzBuzzGenerator()
+    self.assertEquals("buzz",fizzbuzzgenerator.fizzBuzzGenerator(25))
+
 if __name__ == '__main__':
     unittest.main()

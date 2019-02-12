@@ -10,5 +10,6 @@ class FizzBuzzGenerator:
 
     def fizzBuzzGenerator(self,input):
         if self.validateInput(input):
-            pass
+            if input%3 == 0 and not(input%5 == 0):
+				return "fizz"
         
