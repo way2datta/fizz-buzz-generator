@@ -1,30 +1,30 @@
 #FizzBuzzGenerator.py
 import string
+import sys
 
-def isValidInput(input):
-	return type(input) == int
+class FizzBuzzGenerator:
 
-def isInputGreaterThan5(input):
-	return input >= 5
+	def validateInput(self,input):
+		if type(input) == int:
+			if input > 0:
+				return True
+			else:
+				return None
+		else:
+			return None
+	
+	def fizzBuzzGenerator(self,input):
+		if self.validateInput(input):
+			if input%3 == 0 and not(input%5 == 0):
+				return "fizz"
+			if input%5 == 0 and not(input%3 == 0):
+				return "buzz"
+			if input%3 == 0 and input%5 == 0:
+				return "fizzbuzz"
+			if not(input%3 == 0) and not(input%5 == 0):
+				return str(input)
+		else:
+			return None
 
-def isInputDivisibleBy3(input):
-	return input%3 == 0
-
-def isInputDivisibleBy5(input):
-	return input%5 == 0
-
-def printFizzIfInputIsDivisibleByOnly3(input):
-	if isInputDivisibleBy3(input) and not(isInputDivisibleBy5(input)):
-		return "fizz"
-
-def printBuzzIfInputIsDivisibleByOnly5(input):
-	if not(isInputDivisibleBy3(input)) and isInputDivisibleBy5(input):
-		return "buzz"
-
-def printBuzzIfInputIsDivisibleBy3And5(input):
-	if isInputDivisibleBy3(input) and isInputDivisibleBy5(input):
-		return "fizzbuzz"
-
-def printInputAsStringIfInputIsNotDivisibleBy3And5(input):
-	if not(isInputDivisibleBy3(input)) and not(isInputDivisibleBy5(input)):
-		return str(input)
+if __name__ == '__main__':
+	main()
