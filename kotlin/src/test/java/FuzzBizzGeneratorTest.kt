@@ -21,7 +21,7 @@ class FuzzBizzGeneratorTest {
     }
 
     @Test
-    fun `test If number is divisible by three and return buzz`() {
+    fun `test If number is divisible by five and return buzz`() {
         val input = 10
         val output = generate(input)
         assertEquals(output, "Buzz")
