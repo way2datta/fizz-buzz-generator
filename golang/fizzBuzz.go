@@ -12,7 +12,7 @@ func main() {
   }
 }
 
-func PrintNumber(number int)  string {
+func FizzBuzz(number int)  string {
   isDivisibleByThree := bool(number%3 == 0)
 
   isDivisibleByFive := bool (number%5 == 0)
@@ -32,5 +32,5 @@ func PrintNumber(number int)  string {
 }
 
 func print(number int)  {
-    fmt.Println(PrintNumber(number))
+    fmt.Println(FizzBuzz(number))
 }

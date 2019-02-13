@@ -18,7 +18,7 @@ func TestFizzWhenInputIsDivisibleByThree(t *testing.T){
   data  := TestData{0,0,0,0}
   data.assignMultipleOfThree()
 
-  stringReturned := PrintNumber(data.multipleOfThree)
+  stringReturned := FizzBuzz(data.multipleOfThree)
 
   expectedString := "Fizz"
   if stringReturned != expectedString {
@@ -30,7 +30,7 @@ func TestBuzzWhenInputIsDivisibleByFive(t *testing.T){
   data  := TestData{0,0,0,0}
   data.assignMultipleOfFive()
 
-  stringReturned := PrintNumber(data.multipleOfFive)
+  stringReturned := FizzBuzz(data.multipleOfFive)
   expectedString := "Buzz"
   if stringReturned != expectedString {
     t.Errorf("It should print Buzz for number %d since it is divisible by 5", data.multipleOfFive)
@@ -41,7 +41,7 @@ func TestFizzBuzzWhenInputIsDivisibleByFiveAndThree(t *testing.T){
   data  := TestData{0,0,0,0}
   data.assignMultipleOfThreeAndFive()
 
-  stringReturned := PrintNumber(data.multipleOfThreeAndFive)
+  stringReturned := FizzBuzz(data.multipleOfThreeAndFive)
   expectedString := "FizzBuzz"
 
   if stringReturned != expectedString {
@@ -53,7 +53,7 @@ func TestShouldPrintTheNumberWhenItIsNeitherDivisibleByThreeAndFive(t *testing.T
   data  := TestData{0,0,0,0}
   data.assignNumberNotDivisibleByFiveAndThree()
 
-  stringReturned := PrintNumber(data.numberNotDivisibleByFiveAndThree)
+  stringReturned := FizzBuzz(data.numberNotDivisibleByFiveAndThree)
   expectedString := strconv.Itoa(data.numberNotDivisibleByFiveAndThree)
 
   if expectedString != stringReturned {
