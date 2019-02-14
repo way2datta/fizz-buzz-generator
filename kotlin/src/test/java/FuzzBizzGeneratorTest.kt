@@ -7,30 +7,54 @@ import kotlin.test.assertEquals
 class FuzzBizzGeneratorTest {
 
     @Test
-    fun `test If number is divisible by three and five and return fizz buzz`() {
+    fun `when the number is divisible by three and five then return fizz buzz`() {
+
+        // Arrange
         val input = 15
+
+        // Act
         val output = generate(input)
+
+        // Assert
         assertEquals(output, "Fizz Buzz")
     }
 
     @Test
-    fun `test If number is divisible by three and return fizz`() {
+    fun `when the number is divisible by three then return fizz`() {
+
+        // Arrange
         val input = 9
+
+        // Act
         val output = generate(input)
+
+        // Assert
         assertEquals(output, "Fizz")
     }
 
     @Test
-    fun `test If number is divisible by five and return buzz`() {
+    fun `when the number is divisible by five then return buzz`() {
+
+        // Arrange
         val input = 10
+
+        // Act
         val output = generate(input)
+
+        // Assert
         assertEquals(output, "Buzz")
     }
 
     @Test
-    fun `test If number is not divisible by three and five return the number`() {
+    fun `when the number is not divisible by three and five then return the number in string`() {
+
+        // Arrange
         val input = 11
+
+        // Act
         val output = generate(input)
+
+        // Assert
         assertEquals(output, input.toString())
     }
 
