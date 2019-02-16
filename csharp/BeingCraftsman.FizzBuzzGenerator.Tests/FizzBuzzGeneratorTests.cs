@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BeingCraftsman.FizzBuzz.Tests
@@ -12,9 +13,12 @@ namespace BeingCraftsman.FizzBuzz.Tests
         [DataRow(99)]
         public void ShouldReturnStringFizzWhenGivenNumberIsDivisibleBy3(int input)
         {
-            string actual = FizzBuzzGenerator.Generate(input);
-            string expected = "Fizz";
-            Assert.AreEqual(expected, actual);
+            // Act 
+            string outcome = FizzBuzzGenerator.Generate(input);
+
+            // Assert
+            string expectedOutcome = "Fizz";
+            Assert.AreEqual(expectedOutcome, outcome);
         }
 
         [TestMethod]
@@ -24,9 +28,12 @@ namespace BeingCraftsman.FizzBuzz.Tests
         [DataRow(100)]
         public void ShouldReturnStringBuzzWhenGivenNumberIsDivisibleBy5(int input)
         {
-            string actual = FizzBuzzGenerator.Generate(input);
-            string expected = "Buzz";
-            Assert.AreEqual(expected, actual);
+            // Act
+            string outcome = FizzBuzzGenerator.Generate(input);
+
+            // Assert
+            string expectedOutcome = "Buzz";
+            Assert.AreEqual(expectedOutcome, outcome);
         }
 
         [TestMethod]
@@ -36,9 +43,12 @@ namespace BeingCraftsman.FizzBuzz.Tests
         [DataRow(150)]
         public void ShouldReturnStringFizzBuzzWhenGivenNumberIsDivisibleBy3And5(int input)
         {
-            string actual = FizzBuzzGenerator.Generate(input);
-            string expected = "FizzBuzz";
-            Assert.AreEqual(expected, actual);
+            // Act
+            string outcome = FizzBuzzGenerator.Generate(input);
+
+            // Assert
+            string expectedOutcome = "FizzBuzz";
+            Assert.AreEqual(expectedOutcome, outcome);
         }
 
         [TestMethod]
@@ -48,9 +58,25 @@ namespace BeingCraftsman.FizzBuzz.Tests
         [DataRow(133)]
         public void ShouldReturnInputAsStringWhenGivenNumberIsNeitherDivisibleBy3or5(int input)
         {
-            string actual = FizzBuzzGenerator.Generate(input);
-            string expected = input.ToString();
-            Assert.AreEqual(expected, actual);
+            // Act
+            string outcome = FizzBuzzGenerator.Generate(input);
+
+            // Assert
+            string expectedOutcome = input.ToString();
+            Assert.AreEqual(expectedOutcome, outcome);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldRaiseErrorWhenNumberIsNegative()
+        {
+            // Arrange
+            int input = -100;
+
+            // Act
+            string outcome = FizzBuzzGenerator.Generate(input);
+
+            // Assert: Should throw exception 
         }
     }
 }

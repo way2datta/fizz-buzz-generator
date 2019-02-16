@@ -1,25 +1,33 @@
-﻿namespace BeingCraftsman.FizzBuzz
+﻿using System;
+
+namespace BeingCraftsman.FizzBuzz
 {
     public static class FizzBuzzGenerator
     {
-        public static string Generate(int input)
+        public static string Generate(int value)
         {
-            if (IsDivisibleBy5(input) && IsDivisibleBy3(input))
+            if (value < 0)
+            {
+                var errorMessage = $"{value} is not a positive number.";
+                throw new ArgumentException(errorMessage);
+            }
+
+            if (IsDivisibleBy5(value) && IsDivisibleBy3(value))
             {
                 return "FizzBuzz";
             }
 
-            if (IsDivisibleBy3(input))
+            if (IsDivisibleBy3(value))
             {
                 return "Fizz";
             }
 
-            if (IsDivisibleBy5(input))
+            if (IsDivisibleBy5(value))
             {
                 return "Buzz";
             }
 
-            return input.ToString();
+            return value.ToString();
         }
 
         private static bool IsDivisibleBy3(int input)
