@@ -1,16 +1,10 @@
 class Fizzbuzz
     def self.generate(num)
-        if self.is_divisible_by_3(num) and self.is_divisible_by_5(num)
-            return "fizzbuzz"
-        end
+        return "fizzbuzz" if self.is_divisible_by_3(num) and self.is_divisible_by_5(num)
 
-        if self.is_divisible_by_3(num)
-            return "fizz"
-        end
+        return "fizz" if self.is_divisible_by_3(num)
 
-        if self.is_divisible_by_5(num)
-            return "buzz"
-        end
+        return "buzz" if self.is_divisible_by_5(num)
 
         num.to_s
     end
