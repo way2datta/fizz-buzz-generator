@@ -12,18 +12,17 @@ func main() {
   }
 }
 
+func print(number int)  {
+    fmt.Println(FizzBuzz(number))
+}
+
 func FizzBuzz(number int)  string {
-  isDivisibleByThree := bool(number%3 == 0)
 
-  isDivisibleByFive := bool (number%5 == 0)
-
-  isDivisibleByBothFiveAndThree := isDivisibleByThree && isDivisibleByFive
-
-  if isDivisibleByBothFiveAndThree {
+  if numberIsDivisibleByThree(number) && numberIsDivisibleByFive(number) {
     return ("FizzBuzz")
-    } else if isDivisibleByFive {
+    } else if numberIsDivisibleByFive(number) {
       return ("Buzz")
-    } else if isDivisibleByThree {
+    } else if numberIsDivisibleByThree(number) {
       return ("Fizz")
     }
 
@@ -31,6 +30,10 @@ func FizzBuzz(number int)  string {
 
 }
 
-func print(number int)  {
-    fmt.Println(FizzBuzz(number))
+func numberIsDivisibleByThree(number int) bool {
+  return number%3 ==0
+}
+
+func numberIsDivisibleByFive(number int) bool {
+  return number%5 ==0
 }

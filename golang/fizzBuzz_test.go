@@ -60,3 +60,21 @@ func TestShouldPrintTheNumberWhenItIsNeitherDivisibleByThreeAndFive(t *testing.T
     t.Errorf("It should print the number since number is not divisible by 3 and 5")
   }
 }
+
+func TestShouldDivideMultipleOfThree(t *testing.T){
+  data  := TestData{0,0,0,0}
+  data.assignMultipleOfThree()
+
+  if !numberIsDivisibleByThree(data.multipleOfThree) {
+    t.Errorf("Multiple of three is not divided")
+  }
+}
+
+func TestShouldDivideMultipleOfFive(t *testing.T){
+  data  := TestData{0,0,0,0}
+  data.assignMultipleOfFive()
+
+  if !numberIsDivisibleByFive(data.multipleOfFive) {
+    t.Errorf("Multiple of five is not divided")
+  }
+}
