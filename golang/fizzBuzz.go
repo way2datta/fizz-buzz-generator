@@ -17,16 +17,17 @@ func print(number int)  {
 }
 
 func FizzBuzz(number int)  string {
-
   if numberIsDivisibleByThree(number) && numberIsDivisibleByFive(number) {
     return ("FizzBuzz")
-    } else if numberIsDivisibleByFive(number) {
-      return ("Buzz")
-    } else if numberIsDivisibleByThree(number) {
-      return ("Fizz")
     }
+  if numberIsDivisibleByFive(number) {
+    return ("Buzz")
+  }
+  if numberIsDivisibleByThree(number) {
+    return ("Fizz")
+  }
 
-    return (strconv.Itoa(number))
+  return (strconv.Itoa(number))
 
 }
 
