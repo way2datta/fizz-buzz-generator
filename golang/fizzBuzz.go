@@ -13,10 +13,10 @@ func main() {
 }
 
 func print(number int)  {
-    fmt.Println(FizzBuzz(number))
+    fmt.Println(FizzBuzzGenerator(number))
 }
 
-func FizzBuzz(number int)  string {
+func FizzBuzzGenerator(number int)  string {
   if numberIsDivisibleByThree(number) && numberIsDivisibleByFive(number) {
     return ("FizzBuzz")
     }
